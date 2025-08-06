@@ -41,7 +41,7 @@ function App() {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h1 className="text-center mt-5 mb-4">My Todo List</h1>
+                <h1 className="text-center mt-5 mb-4">My ToDo List</h1>
               </div>
             </div>
             <div className="row justify-content-center">
