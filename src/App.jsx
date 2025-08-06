@@ -50,7 +50,7 @@ function App() {
                 <TodoList />
                 <p className="text-center mt-4">
                   {todoList.length === 0
-                    ? `Click on "Add Todo" to add a task`
+                    ? `Click on "Add Todo" to add a new task`
                     : ""}
                 </p>
               </div>
