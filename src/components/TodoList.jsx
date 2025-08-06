@@ -1,7 +1,10 @@
-export default function TodoList({ todos, clickOnDeleteTodo }) {
+import { useContext } from "react";
+import { TodoItemContext } from "../store/todo-item-store";
+export default function TodoList() {
+  const { todoList, handleDeleteTodo } = useContext(TodoItemContext);
   return (
     <>
-      {todos.map((todo, index) => (
+      {todoList.map((todo, index) => (
         <div className="row mt-4" key={index}>
           <div className="col-lg-1">
             <p className="fw-bold p-2 m-0">{index + 1}</p>
@@ -15,7 +18,7 @@ export default function TodoList({ todos, clickOnDeleteTodo }) {
           <div className="col-lg-2">
             <button
               className="btn btn-danger"
-              onClick={() => clickOnDeleteTodo(todo.name)}
+              onClick={() => handleDeleteTodo(todo.name)}
             >
               Delete
             </button>
