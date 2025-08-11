@@ -5,7 +5,7 @@ export default function ErrorMessage() {
   return (
     <>
       <p className="text-center mt-4">
-        {todoList.length === 0 ? `Click on "Add Todo" to add a new task` : ""}
+        {todoList.length === 0 ? `Click on "Add Todo" to add new task` : ""}
       </p>
     </>
   );
