@@ -16,7 +16,7 @@ const todoItemReducer = (curretState, action) => {
     ];
   } else if (action.type === "DELETE_TODO") {
     newTodoItem = curretState.filter(
-      (todo) => todo.name !== action.payload.todoIndex
+      (todo) => todo.name !== action.payload.todoName
     );
   }
   return newTodoItem;
@@ -31,10 +31,10 @@ const TodoItemContextProvider = ({ children }) => {
     };
     itemDispatch(newItemAddAction);
   };
-  const handleDeleteTodo = (todoIndex) => {
+  const handleDeleteTodo = (todoName) => {
     const newItemDeleteAction = {
       type: "DELETE_TODO",
-      payload: { todoIndex },
+      payload: { todoName },
     };
     itemDispatch(newItemDeleteAction);
   };
